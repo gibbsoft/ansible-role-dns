@@ -6,7 +6,7 @@ Ansible role for configure DNS
 # Examples :
 ```
 - hosts: all
-  roles: 
+  roles:
   - role: ansible-role-dns
     dns_domain: localdomain
     dns_nameservers: ['127.0.0.1', '8.8.8.8']
@@ -16,5 +16,6 @@ Ansible role for configure DNS
   - role: ansible-role-dns
     dns_nameservers: ['8.8.8.8']  
     dns_searchs: "localdomain otherdomain"
+    dns_options: ['timeout:3', 'attempts:5']
 
 ```
